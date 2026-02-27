@@ -69,6 +69,11 @@ export const metadata: Metadata = {
       'max-snippet': -1,
     },
   },
+  icons: {
+    icon: "/logo-finance-cropped.png",
+    shortcut: "/logo-finance-cropped.png",
+    apple: "/logo-finance-cropped.png",
+  },
 };
 
 export default function RootLayout({

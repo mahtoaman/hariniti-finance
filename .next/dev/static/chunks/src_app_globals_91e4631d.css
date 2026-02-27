@@ -393,6 +393,10 @@ h1, h2, h3, h4, h5, h6 {
   visibility: hidden;
 }
 
+.collapse {
+  visibility: collapse;
+}
+
 .static {
   position: static;
 }
@@ -1808,11 +1812,6 @@ h1, h2, h3, h4, h5, h6 {
   fill: currentColor;
 }
 
-.object-contain {
-  -o-object-fit: contain;
-  object-fit: contain;
-}
-
 .object-cover {
   -o-object-fit: cover;
   object-fit: cover;
@@ -2312,6 +2311,11 @@ h1, h2, h3, h4, h5, h6 {
 .text-white {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity, 1));
+}
+
+.text-red-500 {
+  --tw-text-opacity: 1;
+  color: rgb(239 68 68 / var(--tw-text-opacity, 1));
 }
 
 .underline {
@@ -2995,6 +2999,10 @@ h1, h2, h3, h4, h5, h6 {
 
 .disabled\:opacity-50:disabled {
   opacity: .5;
+}
+
+.disabled\:opacity-70:disabled {
+  opacity: .7;
 }
 
 .group\/menu-item:focus-within .group-focus-within\/menu-item\:opacity-100 {

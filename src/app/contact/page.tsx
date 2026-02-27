@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, FormEvent } from "react";
+import { submitContactForm } from "@/app/actions/contact";
 import Link from "next/link";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
@@ -104,11 +105,28 @@ export default function ContactPage() {
     message: "",
   });
   const [submitted, setSubmitted] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [errorMsg, setErrorMsg] = useState<string | null>(null);
 
-  const handleSubmit = (e: FormEvent) => {
+  const handleSubmit = async (e: FormEvent) => {
     e.preventDefault();
-    // TODO: Connect to email service or Google Sheets
-    setSubmitted(true);
+    setIsSubmitting(true);
+    setErrorMsg(null);
+    
+    try {
+      const response = await submitContactForm(formData);
+      
+      if (response && response.success) {
+        setSubmitted(true);
+      } else {
+        setErrorMsg(response?.error || "Something went wrong. Please try again later.");
+      }
+    } catch (err) {
+      console.error(err);
+      setErrorMsg("An unexpected server error occurred.");
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -348,11 +366,17 @@ export default function ContactPage() {
                   </div>
                   <button
                     type="submit"
-                    className="w-full inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-lg bg-accent text-accent-foreground font-body font-semibold text-sm hover:brightness-110 transition-all shadow-gold group"
+                    disabled={isSubmitting}
+                    className="w-full inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-lg bg-accent text-accent-foreground font-body font-semibold text-sm hover:brightness-110 transition-all shadow-gold group disabled:opacity-70 disabled:cursor-not-allowed"
                   >
-                    Send Message
-                    <Send className="w-4 h-4 group-hover:translate-x-0.5 transition-transform" />
+                    {isSubmitting ? "Sending..." : "Send Message"}
+                    {!isSubmitting && <Send className="w-4 h-4 group-hover:translate-x-0.5 transition-transform" />}
                   </button>
+                  {errorMsg && (
+                    <p className="text-sm font-body font-medium text-red-500 text-center mt-2">
+                       {errorMsg}
+                    </p>
+                  )}
                 </form>
               )}
             </div>
