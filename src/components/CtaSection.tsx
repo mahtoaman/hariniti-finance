@@ -25,7 +25,7 @@ const CtaSection = () => {
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
               <a
-                href="tel:+919999999999"
+                href="tel:+919771380480"
                 className="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-lg bg-accent text-accent-foreground font-body font-semibold text-base hover:brightness-110 transition-all shadow-gold group"
               >
                 Schedule a Free Strategy Call
@@ -35,9 +35,9 @@ const CtaSection = () => {
 
             <div className="grid sm:grid-cols-3 gap-6">
               {[
-                { icon: Phone, label: "Call Us", value: "+91 99999 99999" },
-                { icon: Mail, label: "Email", value: "info@harinitifinance.com" },
-                { icon: MapPin, label: "Location", value: "India" },
+                { icon: Phone, label: "Call Us", value: "+91 97713 80480" },
+                { icon: Mail, label: "Email", value: "harinitifinancea@gmail.com" },
+                { icon: MapPin, label: "Location", value: "East Delhi, 110092" },
               ].map((item, i) => (
                 <div key={i} className="flex flex-col items-center gap-2 p-4">
                   <item.icon className="w-5 h-5 text-gold mb-1" />
