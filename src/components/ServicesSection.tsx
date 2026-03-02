@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { motion } from "framer-motion";
+import { servicesData } from "@/data/services-data";
 import {
   Landmark,
   BarChart3,
@@ -13,59 +14,16 @@ import {
   HardHat,
   ArrowRight,
 } from "lucide-react";
+import type { LucideIcon } from "lucide-react";
 
-const services = [
-  {
-    icon: Landmark,
-    title: "Loan & Funding Assistance",
-    desc: "End-to-end support for securing the right loans and funding solutions tailored to your business needs.",
-  },
-  {
-    icon: BarChart3,
-    title: "Business Financial Advisory",
-    desc: "Strategic financial planning and advisory to drive informed decisions and sustainable business growth.",
-  },
-  {
-    icon: FileText,
-    title: "Accounting, GST & Tax",
-    desc: "Comprehensive bookkeeping, GST compliance, and income tax consultancy to keep you always audit-ready.",
-  },
-  {
-    icon: Scale,
-    title: "MCA & Legal Compliance",
-    desc: "MCA services, legal compliances, NCLT and IBC consultancy for robust corporate governance.",
-  },
-  {
-    icon: Coins,
-    title: "Financial Consultancy & Asset Management",
-    desc: "Expert asset management and financial consultancy services to grow and protect your wealth.",
-  },
-  {
-    icon: Rocket,
-    title: "Startup India & Incorporation",
-    desc: "Business incorporation, Startup India registration, and end-to-end setup support for new ventures.",
-  },
-  {
-    icon: UserCheck,
-    title: "Virtual CFO Services",
-    desc: "Get the expertise of a Chief Financial Officer without the full-time cost — strategic finance on demand.",
-  },
-  {
-    icon: TrendingUp,
-    title: "Funding & Valuation Support",
-    desc: "Business valuation, investor-ready financials, and fundraising strategy for growth-stage companies.",
-  },
-  {
-    icon: Building2,
-    title: "Real Estate Investment Support",
-    desc: "Expert guidance on real estate investment analysis, structuring, and portfolio optimization.",
-  },
-  {
-    icon: HardHat,
-    title: "Stalled Projects Funding",
-    desc: "Specialized funding support and financial restructuring for stalled or distressed projects.",
-  },
-];
+const iconMap: Record<string, LucideIcon> = {
+  Landmark, BarChart3, FileText, Scale, Coins, Rocket, UserCheck, TrendingUp, Building2, HardHat,
+};
+
+const services = servicesData.map((s) => ({
+  ...s,
+  icon: iconMap[s.iconName] ?? FileText,
+}));
 
 const ServicesSection = () => {
   return (
@@ -141,8 +99,22 @@ const ServicesSection = () => {
                     <p className={`text-base font-body text-muted-foreground leading-relaxed ${isWide ? "max-w-md" : ""}`}>
                       {service.desc}
                     </p>
+                    {/* Clickable link */}
+                    <Link
+                      href={`/services/${service.slug}`}
+                      className="inline-flex items-center gap-1.5 mt-5 text-sm font-body font-semibold text-accent opacity-0 group-hover:opacity-100 translate-y-2 group-hover:translate-y-0 transition-all duration-300"
+                    >
+                      Learn More <ArrowRight className="w-3.5 h-3.5" />
+                    </Link>
                   </div>
                 </div>
+
+                {/* Full-card clickable overlay */}
+                <Link
+                  href={`/services/${service.slug}`}
+                  className="absolute inset-0 z-20"
+                  aria-label={`Learn more about ${service.title}`}
+                />
               </motion.div>
             );
           })}

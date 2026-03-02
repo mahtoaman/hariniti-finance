@@ -51,7 +51,7 @@ const contactInfo = [
 const services = [
   "Loan & Funding Assistance",
   "Business Financial Advisory",
-  "Accounting, GST & Tax",
+  "Income Tax & TDS Return Filing, Appeal Filing Support",
   "MCA & Legal Compliance",
   "Financial Consultancy & Asset Management",
   "Startup India & Incorporation",

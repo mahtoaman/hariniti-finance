@@ -1,11 +1,1 @@
-{
-  "version": 4,
-  "routes": {},
-  "dynamicRoutes": {},
-  "notFoundRoutes": [],
-  "preview": {
-    "previewModeId": "e15a4ff5529bd4b85b50d2aca5b6a2c5",
-    "previewModeSigningKey": "d5502363ac03f2c703fbbabbeb8ca46e7d1080c2a21c5776270bba586556d6a6",
-    "previewModeEncryptionKey": "01b44879b2bb7173333a65c5e8858cae00cc6582ba00346736d591e823a0f1de"
-  }
-}
+{"version":4,"routes":{"/services/loan-funding-assistance":{},"/services/business-financial-advisory":{},"/services/virtual-cfo-services":{},"/services/income-tax-tds-filing":{},"/services/funding-valuation-support":{},"/services/startup-india-incorporation":{},"/services/mca-legal-compliance":{},"/services/financial-consultancy":{},"/services/real-estate-investment":{},"/services/stalled-projects-funding":{}},"dynamicRoutes":{"/services/[slug]":{"dataRoute":null,"dataRouteRegex":null,"fallback":null,"fallbackRevalidate":false,"fallbackSourceRoute":"/services/[slug]","routeRegex":"^\\/services\\/([^/]+?)(?:\\/)?$","allowHeader":[]}},"notFoundRoutes":[],"preview":{"previewModeId":"b4f998580d6ae0ae2bb0ae231de0015a","previewModeSigningKey":"df856e7898b2776e48891ad178ab17ed82cc9888bfa71c9127be7993e11b1aa6","previewModeEncryptionKey":"92b3a6fd9cde9423b4b7a94e85838d335a0c51439fe4ae548173572e81181d7b"}}

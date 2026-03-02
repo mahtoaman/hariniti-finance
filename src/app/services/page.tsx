@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import { servicesData } from "@/data/services-data";
 import {
   Landmark,
   BarChart3,
@@ -16,6 +17,11 @@ import {
   ArrowRight,
   CheckCircle2,
 } from "lucide-react";
+import type { LucideIcon } from "lucide-react";
+
+const iconMap: Record<string, LucideIcon> = {
+  Landmark, BarChart3, FileText, Scale, Coins, Rocket, UserCheck, TrendingUp, Building2, HardHat,
+};
 
 export const metadata: Metadata = {
   title: "Our Services | Hariniti Finance",
@@ -23,78 +29,11 @@ export const metadata: Metadata = {
     "Explore our comprehensive financial solutions including Loan & Funding Assistance, Business Financial Advisory, Virtual CFO Services, and Taxation in India.",
 };
 
-const extendedServices = [
-  {
-    icon: Landmark,
-    title: "Loan & Funding Assistance",
-    desc: "End-to-end support for securing the right loans and funding solutions tailored to your business needs.",
-    image: "/service-1.jpg",
-    features: ["Project Finance Support", "Working Capital Loans", "Term Loans & LAP", "SME & MSME Funding"],
-  },
-  {
-    icon: BarChart3,
-    title: "Business Financial Advisory",
-    desc: "Strategic financial planning and advisory to drive informed decisions and sustainable business growth.",
-    image: "/service-2.jpg",
-    features: ["Strategic Financial Planning", "Risk Management", "Performance Optimization", "Cash Flow Structuring"],
-  },
-  {
-    icon: UserCheck,
-    title: "Virtual CFO Services",
-    desc: "Get the expertise of a Chief Financial Officer without the full-time cost — strategic finance on demand.",
-    image: "/service-3.jpg",
-    features: ["Management Dashboards", "Budgeting & Forecasting", "Profitability Analysis", "Cost Optimization"],
-  },
-  {
-    icon: FileText,
-    title: "Accounting, GST & Tax",
-    desc: "Comprehensive bookkeeping, GST compliance, and income tax consultancy to keep you always audit-ready.",
-    image: "/service-4.jpg",
-    features: ["Statutory Audit Support", "Direct & Indirect Taxation", "GST Filing & Reconciliation", "Bookkeeping Services"],
-  },
-  {
-    icon: TrendingUp,
-    title: "Funding & Valuation Support",
-    desc: "Business valuation, investor-ready financials, and fundraising strategy for growth-stage companies.",
-    image: "/service-5.jpg",
-    features: ["Pitch Deck Preparation", "Business Valuation Reports", "Due Diligence Support", "PE & VC Fundraising"],
-  },
-  {
-    icon: Rocket,
-    title: "Startup India & Incorporation",
-    desc: "Business incorporation, Startup India registration, and end-to-end setup support for new ventures.",
-    image: "/service-6.jpg",
-    features: ["Company Registration", "Startup India Seed Fund", "DIPP Recognition", "Founder Agreements"],
-  },
-  {
-    icon: Scale,
-    title: "MCA & Legal Compliance",
-    desc: "MCA services, legal compliances, NCLT and IBC consultancy for robust corporate governance.",
-    image: "/service-7.jpg",
-    features: ["Company Secretarial Work", "NCLT Representation", "Corporate Governance", "Annual ROC Filings"],
-  },
-  {
-    icon: Coins,
-    title: "Financial Consultancy & Asset Management",
-    desc: "Expert asset management and financial consultancy services to grow and protect your wealth.",
-    image: "/service-8.jpg",
-    features: ["Portfolio Structuring", "Wealth Management", "Investment Advisory", "Market Research"],
-  },
-  {
-    icon: Building2,
-    title: "Real Estate Investment Support",
-    desc: "Expert guidance on real estate investment analysis, structuring, and portfolio optimization.",
-    image: "/service-9.jpg",
-    features: ["REITs & Alternate Assets", "Property Due Diligence", "Investment Structuring", "ROI Analysis"],
-  },
-  {
-    icon: HardHat,
-    title: "Stalled Projects Funding",
-    desc: "Specialized funding support and financial restructuring for stalled or distressed projects.",
-    image: "/service-10.jpg",
-    features: ["Distressed Asset Funding", "Capital Restructuring", "Project Turnaround", "Special Situation Funds"],
-  },
-];
+// Derive the extended services list from the shared data, attaching the resolved icon.
+const extendedServices = servicesData.map((s) => ({
+  ...s,
+  icon: iconMap[s.iconName] ?? FileText,
+}));
 
 export default function ServicesPage() {
   return (
@@ -155,43 +94,52 @@ export default function ServicesPage() {
                     isEven ? "lg:flex-row" : "lg:flex-row-reverse"
                   } gap-12 lg:gap-20 items-center`}
                 >
-                  {/* Image Block */}
-                  <div className="w-full lg:w-1/2">
-                    <div className="relative rounded-[2rem] overflow-hidden aspect-[4/3] sm:aspect-[16/10] lg:aspect-[4/3] shadow-card group">
-                      {/* Placeholder logic: using a colored bg with icon if image fails or isn't there yet */}
+                  {/* Image Block — clicking navigates to service detail */}
+                  <Link href={`/services/${service.slug}`} className="w-full lg:w-1/2 block group">
+                    <div className="relative rounded-[2rem] overflow-hidden aspect-[4/3] sm:aspect-[16/10] lg:aspect-[4/3] shadow-card">
+                      {/* Placeholder bg */}
                       <div className="absolute inset-0 bg-navy/5 flex flex-col items-center justify-center p-8 text-center border-2 border-dashed border-border group-hover:bg-navy/10 transition-colors">
                         <service.icon className="w-16 h-16 text-muted-foreground/30 mb-4" />
                         <p className="text-muted-foreground font-body text-sm font-medium">Image Placeholder</p>
                         <p className="text-muted-foreground/60 font-body text-xs mt-1">Please provide: <code className="text-navy font-bold">{service.image}</code></p>
                       </div>
 
-                      {/* Actual image element (will sit on top if it resolves) */}
+                      {/* Actual image */}
                       <img
                         src={service.image}
                         alt={service.title}
                         className="absolute inset-0 w-full h-full object-cover z-10 group-hover:scale-105 transition-transform duration-700"
                       />
-                      
-                      {/* Gradient overlay for premium feel */}
+
+                      {/* Gradient overlay */}
                       <div className="absolute inset-0 bg-gradient-to-t from-navy-dark/60 via-transparent to-transparent z-20 pointer-events-none" />
 
-                      {/* Icon Badge overlay */}
+                      {/* Icon Badge */}
                       <div className="absolute bottom-6 left-6 w-14 h-14 rounded-2xl bg-white/10 backdrop-blur-md border border-white/20 flex items-center justify-center z-30 shadow-xl">
                         <service.icon className="w-6 h-6 text-gold" />
                       </div>
+
+                      {/* View detail badge on hover */}
+                      <div className="absolute inset-0 z-30 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                        <span className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-gold text-navy-dark font-body font-bold text-sm shadow-lg">
+                          View Details <ArrowRight className="w-4 h-4" />
+                        </span>
+                      </div>
                     </div>
-                  </div>
+                  </Link>
 
                   {/* Content Block */}
                   <div className="w-full lg:w-1/2 flex flex-col justify-center">
                     <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-md bg-accent/10 text-xs font-body font-bold tracking-widest uppercase text-accent mb-6 self-start">
                       Specialized Service
                     </div>
-                    
-                    <h2 className="font-display text-3xl lg:text-4xl font-bold text-foreground mb-6 leading-tight">
-                      {service.title}
-                    </h2>
-                    
+
+                    <Link href={`/services/${service.slug}`}>
+                      <h2 className="font-display text-3xl lg:text-4xl font-bold text-foreground mb-6 leading-tight hover:text-accent transition-colors cursor-pointer">
+                        {service.title}
+                      </h2>
+                    </Link>
+
                     <p className="text-lg text-muted-foreground font-body leading-relaxed mb-8">
                       {service.desc}
                     </p>
@@ -206,13 +154,22 @@ export default function ServicesPage() {
                       ))}
                     </ul>
 
-                    <Link
-                      href="/contact"
-                      className="group/btn inline-flex items-center gap-2 text-navy hover:text-accent font-body font-bold text-base transition-colors self-start pb-1 border-b-2 border-accent/20 hover:border-accent"
-                    >
-                      Discuss this with us
-                      <ArrowRight className="w-4 h-4 group-hover/btn:translate-x-1 transition-transform" />
-                    </Link>
+                    <div className="flex flex-col sm:flex-row gap-4">
+                      <Link
+                        href={`/services/${service.slug}`}
+                        className="group/btn inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-accent text-accent-foreground font-body font-bold text-sm hover:brightness-110 transition-all shadow-sm self-start"
+                      >
+                        View Full Details
+                        <ArrowRight className="w-4 h-4 group-hover/btn:translate-x-1 transition-transform" />
+                      </Link>
+                      <Link
+                        href="/contact"
+                        className="group/btn inline-flex items-center gap-2 text-navy hover:text-accent font-body font-bold text-sm transition-colors self-center pb-1 border-b-2 border-accent/20 hover:border-accent"
+                      >
+                        Discuss this with us
+                        <ArrowRight className="w-4 h-4 group-hover/btn:translate-x-1 transition-transform" />
+                      </Link>
+                    </div>
                   </div>
                 </div>
               );

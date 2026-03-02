@@ -108,7 +108,7 @@ const teamMembers = [
     role: "Taxation & Audit Specialist",
     credentials: "Ex-Grant Thornton",
     bio: "Expert in statutory audits, corporate taxation, and regulatory compliance with a strong foundation in structured advisory and financial governance.",
-    image: "/ca narendra.jpeg",
+    image: "/ca narendra.png",
   },
   {
     name: "Mr. Rajpreet Singh",
@@ -124,6 +124,34 @@ const teamMembers = [
     bio: "Sumit Darshan Yadav is an MBA professional with strong expertise in Corporate Sales and business development. He brings valuable experience from representing M/s Chinar Forge Ltd., Jalandhar, where he played an instrumental role in strengthening brand positioning and driving institutional sales growth. At Hariniti Finance Pvt. Ltd., he plays a pivotal role in strategic lead generation, client acquisition, and expanding corporate partnerships—directly contributing to revenue growth and enhanced market presence.",
     image: "/sumit darshan yadav.png",
   },
+  {
+    name: "CA Nikhil Kabra",
+    role: "Senior Consultant",
+    credentials: "CA | CSI | LL.B.",
+    bio: "CA Nikhil Kabra is a multidisciplinary finance and legal professional serving as a Senior Consultant at HariNiti Finance Pvt Ltd. With qualifications in Chartered Accountancy, Corporate Secretarial Practice, and Law, he brings a rare integrated perspective to financial strategy, regulatory compliance, and corporate structuring. He specializes in taxation advisory, corporate governance, transaction structuring, and strategic financial consulting — delivering solutions that align legal precision with commercial practicality. His advisory approach focuses on risk mitigation, compliance excellence, and long-term value creation. Known for his analytical depth and governance-first mindset, CA Nikhil Kabra partners with promoters, startups, and growth-stage enterprises to build compliant, scalable, and financially resilient organizations.",
+    image: "/CA Nikhil Kabra.png",
+  },
+  {
+    name: "CA Rohit Kumar",
+    role: "Advisor",
+    credentials: "CA",
+    bio: "CA Rohit Kumar brings over 2 years of experience as Finance Head at Digital Live Services and Digital Live Solutions Limited, where he led financial strategy, compliance, and reporting functions. At HarNiti Finance Pvt. Ltd., he advises businesses on financial structuring, regulatory compliance, and performance optimization — helping organizations build strong, growth-ready financial foundations.",
+    image: "/CA Rohit Kumar.png",
+  },
+  {
+    name: "Advocate Abhishek Dixit",
+    role: "Litigation & Dispute Resolution Professional",
+    credentials: "Advocate",
+    bio: "Advocate Abhishek Dixit is a dynamic litigation and dispute resolution professional with expertise in civil, criminal, commercial, banking, insolvency, tax, and regulatory matters. He regularly represents clients before various High Courts and the Supreme Court of India, handling complex proceedings under the Insolvency and Bankruptcy Code and the Prevention of Money Laundering Act. He is an integral part of the expert legal team at Hariniti Finance Pvt Ltd, delivering strategic legal solutions in high-stakes financial and regulatory matters.",
+    image: "/Advocate Abhishek Dixit .png",
+  },
+  {
+    name: "CA Rajesh Sah",
+    role: "Accounting, Bookkeeping & Taxation Expert",
+    credentials: "CA",
+    bio: "CA Rajesh Sah is a dedicated Chartered Accountant specializing in Accounting, Bookkeeping, GST Advisory, Audit, and Corporate Compliance. At HariNiti Finance Pvt Ltd, he oversees end-to-end financial management services, ensuring accuracy, transparency, and full statutory compliance for businesses across sectors. With strong expertise in Financial Statement Finalization, Ind-AS compliance, GST returns (GSTR-1, 3B, 9 & 9C), Income Tax filings, ROC compliance, and ITC advisory (including Rule 42 & 43 computations), he provides structured financial solutions tailored to client needs. Proficient in Tally Prime, Zoho Books, Busy Software, and MS Office, CA Rajesh Sah combines technical expertise with analytical strength to deliver reliable, compliant, and growth-oriented financial services.",
+    image: "/ca rajesh sah.png",
+  }
 ];
 
 
