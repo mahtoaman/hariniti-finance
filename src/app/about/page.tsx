@@ -146,6 +146,13 @@ const teamMembers = [
     image: "/Advocate Abhishek Dixit .png",
   },
   {
+    name: "CS Saumya Saxena",
+    role: "Company Secretary | Corporate Governance & Compliance Expert",
+    credentials: "CS | 7+ Years Experience",
+    bio: "CS Saumya Saxena is a qualified Company Secretary with over 7+ years of experience in corporate governance, regulatory compliance, and strategic advisory. She specializes in Companies Act, 2013 compliances, ROC matters, board and shareholder advisory, share capital restructuring, and FEMA regulations. She provides proactive, result-oriented compliance solutions and represents clients before the Ministry of Corporate Affairs and other regulatory authorities. She is currently associated with HariNiti Finance Pvt. Ltd., strengthening its corporate governance and regulatory advisory practice.",
+    image: "/CS Saumya Saxena.jpeg",
+  },
+  {
     name: "CA Rajesh Sah",
     role: "Accounting, Bookkeeping & Taxation Expert",
     credentials: "CA",
