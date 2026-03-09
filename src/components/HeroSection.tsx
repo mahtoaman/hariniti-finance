@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { ArrowRight, Shield, TrendingUp, Users } from "lucide-react";
 import heroBg from "@/assets/hero-bg.jpg";
+import Link from "next/link";
 
 const HeroSection = () => {
   return (
@@ -84,18 +85,28 @@ const HeroSection = () => {
           className="mt-20 grid grid-cols-1 sm:grid-cols-3 gap-6 max-w-2xl"
         >
           {[
-            { icon: Users, label: "Expert Team", value: "20+ Professionals" },
+            { icon: Users, label: "Expert Team", value: "20+ Professionals", href: "/team" },
             { icon: Shield, label: "Certified", value: "CA, CS, MBA & More" },
             { icon: TrendingUp, label: "Focus", value: "Your Growth" },
-          ].map((stat, i) => (
-            <div key={i} className="flex items-center gap-3 px-4 py-3 rounded-lg bg-gold/5 border border-gold/10">
-              <stat.icon className="w-5 h-5 text-gold flex-shrink-0" />
-              <div>
-                <div className="text-sm font-body font-semibold text-gold-light/90">{stat.value}</div>
-                <div className="text-xs font-body text-gold-light/40">{stat.label}</div>
+          ].map((stat, i) => {
+            const content = (
+              <div key={i} className={`flex items-center gap-3 px-4 py-3 rounded-lg bg-gold/5 border border-gold/10 transition-all h-full ${stat.href ? 'hover:bg-gold/10 hover:border-gold/30 cursor-pointer' : ''}`}>
+                <stat.icon className="w-5 h-5 text-gold flex-shrink-0" />
+                <div>
+                  <div className="text-sm font-body font-semibold text-gold-light/90">{stat.value}</div>
+                  <div className="text-xs font-body text-gold-light/40">{stat.label}</div>
+                </div>
               </div>
-            </div>
-          ))}
+            );
+
+            return stat.href ? (
+              <Link key={i} href={stat.href}>
+                {content}
+              </Link>
+            ) : (
+              <div key={i}>{content}</div>
+            );
+          })}
         </motion.div>
       </div>
     </section>

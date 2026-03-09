@@ -34,6 +34,7 @@ const Footer = () => {
               {[
                 { label: "Home", href: "/" },
                 { label: "About Us", href: "/about" },
+                { label: "Our Team", href: "/team" },
                 { label: "Services", href: "/services" },
                 { label: "Contact Us", href: "/contact" },
               ].map((link) => (

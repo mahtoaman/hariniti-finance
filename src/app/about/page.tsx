@@ -17,6 +17,7 @@ import {
   Users,
 } from "lucide-react";
 import TeamCarousel from "@/components/TeamCarousel";
+import { teamMembers } from "@/data/team-data";
 
 export const metadata: Metadata = {
   title: "About Us",
@@ -67,120 +68,6 @@ const team = [
   },
 ];
 
-const teamMembers = [
-  {
-    name: "CA Satish Singh Rajput",
-    role: "Founder & Non-Executive Director",
-    credentials: "CA | AIR–13 (CA Inter)",
-    bio: "Founder of Hariniti Finance Pvt. Ltd. with 5+ years of diversified experience across stock markets, derivatives, commodities trading, portfolio management, project funding, business consulting, startup advisory, and tax consultancy. AIR–13 in CA (Inter) and former leading member of the Internal Audit Team of a listed NBFC for 2.5 years. Leads Hariniti Finance with a commitment to growth, integrity, and long-term value creation.",
-    image: "/satish singh.png",
-  },
-  {
-    name: "Amit Mishra",
-    role: "CEO – Hariniti Finance",
-    credentials: "MBA (Finance) | CFA Level I | CA (Pursuing)",
-    bio: "A results-driven banking and finance leader with 5+ years of experience in credit, audit, and risk management. Senior Team Member in the Statutory Audit of Bank of Baroda. Expert in Retail Banking, Home Loan & LAP Structuring, and Core Banking Advisory. Driving Hariniti Finance with a vision to deliver strategic funding solutions and scalable financial growth.",
-    image: "/amit mishra.png",
-  },
-  {
-    name: "Prabhat Chandra",
-    role: "Director & Chief Financial Officer",
-    credentials: "B.Com | M.Com | 17+ Years Experience",
-    bio: "17+ years of experience in sales and credit underwriting across Home Loans, Business Loans, Personal Loans, and Structured Finance. Managed the complete lending cycle from sourcing to disbursement, with strong expertise in financial assessment, risk evaluation, and portfolio quality. Leads financial strategy and credit governance at Hariniti Finance.",
-    image: "/prabhat chandra.png",
-  },
-  {
-    name: "Rahul Ranjan Roy",
-    role: "Head of Growth & Strategic Advisory",
-    credentials: "MBA (Marketing) | 14 Years Experience",
-    bio: "MBA (Marketing) professional with 14 years of execution-driven experience in Marketing and HR. Proven track record in scaling operations, optimizing people performance, and driving growth, with experience at LNJ Bhilwara Group and a US-based MNC. Leads growth, compliance, and strategic advisory at Hariniti Finance.",
-    image: "/mba-rahul.png",
-  },
-  {
-    name: "ER Ranjit K. Singh",
-    role: "Capital Markets Leader | Investment Strategist",
-    credentials: "Finance Professional",
-    bio: "A results-driven Finance Professional with deep expertise in equity markets and brokerage leadership, ER Ranjit K. Singh brings strong institutional experience from Motilal Oswal Financial Services and Nirmal Bang Securities. As the driving force behind a franchise of Globe Capital Market Limited, he leads high-performance trading operations, strategic client acquisition, and wealth-focused investment advisory. At Hariniti Finance, he powers the Capital Markets vertical with precision, performance, and a growth-first mindset.",
-    image: "/ranjeetksingh.png",
-  },
-  {
-    name: "CA Narendra P. Sah",
-    role: "Taxation & Audit Specialist",
-    credentials: "Ex-Grant Thornton",
-    bio: "Expert in statutory audits, corporate taxation, and regulatory compliance with a strong foundation in structured advisory and financial governance.",
-    image: "/ca narendra.png",
-  },
-  {
-    name: "Mr. Rajpreet Singh",
-    role: "Global Real Estate & Operations Leader",
-    credentials: "Post Graduate | 23+ Years Experience",
-    bio: "A Post Graduate professional with 23+ years of leadership in large-scale Infrastructure and Global Real Estate across India and the UAE. Specializing in Luxury Developments, IT Parks, Pre-Leased Assets, Hospitality, and Strategic Investment Advisory — delivering vision-driven, high-value projects with cross-border expertise.",
-    image: "/rajpreetsingh.png",
-  },
-  {
-    name: "Sumit Darshan Yadav",
-    role: "Corporate Sales & Strategic Partnerships",
-    credentials: "MBA",
-    bio: "Sumit Darshan Yadav is an MBA professional with strong expertise in Corporate Sales and business development. He brings valuable experience from representing M/s Chinar Forge Ltd., Jalandhar, where he played an instrumental role in strengthening brand positioning and driving institutional sales growth. At Hariniti Finance Pvt. Ltd., he plays a pivotal role in strategic lead generation, client acquisition, and expanding corporate partnerships—directly contributing to revenue growth and enhanced market presence.",
-    image: "/sumit darshan yadav.png",
-  },
-  {
-    name: "CA Nikhil Kabra",
-    role: "Senior Consultant",
-    credentials: "CA | CS | LL.B.",
-    bio: "CA Nikhil Kabra is a multidisciplinary finance and legal professional serving as a Senior Consultant at HariNiti Finance Pvt Ltd. With qualifications in Chartered Accountancy, Corporate Secretarial Practice, and Law, he brings a rare integrated perspective to financial strategy, regulatory compliance, and corporate structuring. He specializes in taxation advisory, corporate governance, transaction structuring, and strategic financial consulting — delivering solutions that align legal precision with commercial practicality. His advisory approach focuses on risk mitigation, compliance excellence, and long-term value creation. Known for his analytical depth and governance-first mindset, CA Nikhil Kabra partners with promoters, startups, and growth-stage enterprises to build compliant, scalable, and financially resilient organizations.",
-    image: "/CA Nikhil Kabra.png",
-  },
-  {
-    name: "CA Rohit Kumar",
-    role: "Advisor",
-    credentials: "CA",
-    bio: "CA Rohit Kumar brings over 2 years of experience as Finance Head at Digital Live Services and Digital Live Solutions Limited, where he led financial strategy, compliance, and reporting functions. At HarNiti Finance Pvt. Ltd., he advises businesses on financial structuring, regulatory compliance, and performance optimization — helping organizations build strong, growth-ready financial foundations.",
-    image: "/CA Rohit Kumar.png",
-  },
-  {
-    name: "Advocate Abhishek Dixit",
-    role: "Litigation & Dispute Resolution Professional",
-    credentials: "Advocate",
-    bio: "Advocate Abhishek Dixit is a dynamic litigation and dispute resolution professional with expertise in civil, criminal, commercial, banking, insolvency, tax, and regulatory matters. He regularly represents clients before various High Courts and the Supreme Court of India, handling complex proceedings under the Insolvency and Bankruptcy Code and the Prevention of Money Laundering Act. He is an integral part of the expert legal team at Hariniti Finance Pvt Ltd, delivering strategic legal solutions in high-stakes financial and regulatory matters.",
-    image: "/Advocate Abhishek Dixit .png",
-  },
-  {
-    name: "CS Saumya Saxena",
-    role: "Company Secretary | Corporate Governance & Compliance Expert",
-    credentials: "CS | 7+ Years Experience",
-    bio: "CS Saumya Saxena is a qualified Company Secretary with over 7+ years of experience in corporate governance, regulatory compliance, and strategic advisory. She specializes in Companies Act, 2013 compliances, ROC matters, board and shareholder advisory, share capital restructuring, and FEMA regulations. She provides proactive, result-oriented compliance solutions and represents clients before the Ministry of Corporate Affairs and other regulatory authorities. She is currently associated with HariNiti Finance Pvt. Ltd., strengthening its corporate governance and regulatory advisory practice.",
-    image: "/CS Saumya Saxena.jpeg",
-  },
-  {
-    name: "CA Rajesh Sah",
-    role: "Accounting, Bookkeeping & Taxation Expert",
-    credentials: "CA",
-    bio: "CA Rajesh Sah is a dedicated Chartered Accountant specializing in Accounting, Bookkeeping, GST Advisory, Audit, and Corporate Compliance. At HariNiti Finance Pvt Ltd, he oversees end-to-end financial management services, ensuring accuracy, transparency, and full statutory compliance for businesses across sectors. With strong expertise in Financial Statement Finalization, Ind-AS compliance, GST returns (GSTR-1, 3B, 9 & 9C), Income Tax filings, ROC compliance, and ITC advisory (including Rule 42 & 43 computations), he provides structured financial solutions tailored to client needs. Proficient in Tally Prime, Zoho Books, Busy Software, and MS Office, CA Rajesh Sah combines technical expertise with analytical strength to deliver reliable, compliant, and growth-oriented financial services.",
-    image: "/ca rajesh sah.png",
-  },
-  {
-    name: "CA Vikrant Sharma",
-    role: "Taxation | Corporate Compliance | Regulatory Advisory",
-    credentials: "ACA | LL.B | MBA | CS (Inter) | M.Com",
-    bio: "CA Vikrant Sharma is a Practicing Chartered Accountant with a strong multidisciplinary background in taxation, corporate law, and financial management. His practice focuses on GST advisory, Income Tax compliance, and strategic tax planning, assisting businesses in navigating complex regulatory frameworks with efficiency and precision. With qualifications spanning Chartered Accountancy, Law, Management, and Corporate Secretarial studies, he brings an integrated advisory perspective to business and regulatory matters. He is currently a member of the expert advisory team at HariNiti Finance Private Limited, contributing to tax advisory and corporate compliance solutions for businesses and entrepreneurs.",
-    image: "/CA Vikrant Sharma.png",
-  },
-  {
-    name: "CA Anshul Pandey",
-    role: "Insurance Claim Surveying, Loss Assessment & Investigation",
-    credentials: "CA",
-    bio: "CA Anshul Pandey is a seasoned professional specializing in insurance claim surveying, loss assessment, and investigation. He is a Partner at Rustagi & Associates, a reputed firm with a legacy of over 43 years in the insurance advisory domain. As part of the expert team at HariNiti Finance Private Limited, he provides valuable insights in risk assessment, financial scrutiny, and insurance advisory services.",
-    image: "/CA Anshul Pandey .png",
-  },
-  {
-    name: "Adv. Ambuj Maurya",
-    role: "Advocate | NCLT & Commercial Litigation",
-    credentials: "LL.B. (Hons.) | Bar Council of India",
-    bio: "Advocate Ambuj Maurya is a litigation professional with experience in corporate insolvency, debt recovery, and commercial disputes. He currently serves as NCLT Desk Head at BKM & Associates, New Delhi, handling matters before multiple benches of the National Company Law Tribunal (NCLT). He specializes in IBC proceedings, legal research, petition drafting, and tribunal litigation, and has worked closely with Insolvency Resolution Professionals (IRPs/RPs) in corporate insolvency cases. Earlier, he was associated with I.S. Chauhan & Associates, where he handled DRT, civil, commercial, and district court litigation.",
-    image: "/Adv. Ambuj Maurya.png",
-  }
-];
 
 
 
@@ -244,24 +131,34 @@ export default function AboutPage() {
               Our leadership team brings over 15+ years of extensive experience across corporate finance, credit structuring, banking operations, risk assessment, compliance, taxation, audit, and strategic financial advisory.
             </p>
 
-            {/* Stats bar */}
             <div className="mt-10 flex flex-wrap gap-4">
               {[
-                { icon: Users, value: "20+", label: "Professionals" },
+                { icon: Users, value: "20+", label: "Professionals", href: "/team" },
                 { icon: Shield, value: "CA, CS, MBA+", label: "Certified Team" },
                 { icon: TrendingUp, value: "Growth", label: "Your Focus" },
-              ].map((s, i) => (
-                <div
-                  key={i}
-                  className="flex items-center gap-3 px-4 py-3 rounded-lg bg-gold/10 border border-gold/20 backdrop-blur-sm"
-                >
-                  <s.icon className="w-4 h-4 text-gold flex-shrink-0" />
-                  <div>
-                    <div className="text-sm font-body font-semibold text-gold-light/90">{s.value}</div>
-                    <div className="text-xs font-body text-gold-light/50">{s.label}</div>
+              ].map((s, i) => {
+                const content = (
+                  <div
+                    className={`flex items-center gap-3 px-4 py-3 rounded-lg bg-gold/10 border border-gold/20 backdrop-blur-sm transition-all h-full ${
+                      s.href ? "hover:bg-gold/20 hover:border-gold/40 cursor-pointer" : ""
+                    }`}
+                  >
+                    <s.icon className="w-4 h-4 text-gold flex-shrink-0" />
+                    <div>
+                      <div className="text-sm font-body font-semibold text-gold-light/90">{s.value}</div>
+                      <div className="text-xs font-body text-gold-light/50">{s.label}</div>
+                    </div>
                   </div>
-                </div>
-              ))}
+                );
+
+                return s.href ? (
+                  <Link key={i} href={s.href}>
+                    {content}
+                  </Link>
+                ) : (
+                  <div key={i}>{content}</div>
+                );
+              })}
             </div>
           </div>
         </div>
@@ -463,8 +360,18 @@ export default function AboutPage() {
           ))}
 
           {/* ── Carousel for remaining members ── */}
-          {/* ── Carousel for remaining members ── */}
           <TeamCarousel teamMembers={[...teamMembers.slice(1), ...teamMembers.slice(1)]} />
+
+          {/* ── View All Experts Button ── */}
+          <div className="mt-16 text-center">
+            <Link
+              href="/team"
+              className="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-xl bg-white border-2 border-accent text-accent font-body font-bold text-base hover:bg-accent hover:text-white transition-all shadow-sm hover:shadow-card-hover group"
+            >
+              See All Experts
+              <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+            </Link>
+          </div>
 
         </div>
       </section>

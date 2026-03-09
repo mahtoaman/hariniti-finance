@@ -12,8 +12,9 @@ const Navbar = () => {
   const isHome = pathname === "/";
 
   const navLinks = [
-    { label: "Home", href: "/" },
+  { label: "Home", href: "/" },
     { label: "About", href: "/about" },
+    { label: "Team", href: "/team" },
     { label: "Services", href: "/services" },
     { label: "Contact", href: "/contact" },
   ];
