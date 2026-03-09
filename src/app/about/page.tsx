@@ -77,7 +77,7 @@ const teamMembers = [
   },
   {
     name: "Amit Mishra",
-    role: "CEO – Hariniti Finance Pvt. Ltd.",
+    role: "CEO – Hariniti Finance",
     credentials: "MBA (Finance) | CFA Level I | CA (Pursuing)",
     bio: "A results-driven banking and finance leader with 5+ years of experience in credit, audit, and risk management. Senior Team Member in the Statutory Audit of Bank of Baroda. Expert in Retail Banking, Home Loan & LAP Structuring, and Core Banking Advisory. Driving Hariniti Finance with a vision to deliver strategic funding solutions and scalable financial growth.",
     image: "/amit mishra.png",
