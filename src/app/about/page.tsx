@@ -127,7 +127,7 @@ const teamMembers = [
   {
     name: "CA Nikhil Kabra",
     role: "Senior Consultant",
-    credentials: "CA | CSI | LL.B.",
+    credentials: "CA | CS | LL.B.",
     bio: "CA Nikhil Kabra is a multidisciplinary finance and legal professional serving as a Senior Consultant at HariNiti Finance Pvt Ltd. With qualifications in Chartered Accountancy, Corporate Secretarial Practice, and Law, he brings a rare integrated perspective to financial strategy, regulatory compliance, and corporate structuring. He specializes in taxation advisory, corporate governance, transaction structuring, and strategic financial consulting — delivering solutions that align legal precision with commercial practicality. His advisory approach focuses on risk mitigation, compliance excellence, and long-term value creation. Known for his analytical depth and governance-first mindset, CA Nikhil Kabra partners with promoters, startups, and growth-stage enterprises to build compliant, scalable, and financially resilient organizations.",
     image: "/CA Nikhil Kabra.png",
   },
@@ -158,6 +158,27 @@ const teamMembers = [
     credentials: "CA",
     bio: "CA Rajesh Sah is a dedicated Chartered Accountant specializing in Accounting, Bookkeeping, GST Advisory, Audit, and Corporate Compliance. At HariNiti Finance Pvt Ltd, he oversees end-to-end financial management services, ensuring accuracy, transparency, and full statutory compliance for businesses across sectors. With strong expertise in Financial Statement Finalization, Ind-AS compliance, GST returns (GSTR-1, 3B, 9 & 9C), Income Tax filings, ROC compliance, and ITC advisory (including Rule 42 & 43 computations), he provides structured financial solutions tailored to client needs. Proficient in Tally Prime, Zoho Books, Busy Software, and MS Office, CA Rajesh Sah combines technical expertise with analytical strength to deliver reliable, compliant, and growth-oriented financial services.",
     image: "/ca rajesh sah.png",
+  },
+  {
+    name: "CA Vikrant Sharma",
+    role: "Taxation | Corporate Compliance | Regulatory Advisory",
+    credentials: "ACA | LL.B | MBA | CS (Inter) | M.Com",
+    bio: "CA Vikrant Sharma is a Practicing Chartered Accountant with a strong multidisciplinary background in taxation, corporate law, and financial management. His practice focuses on GST advisory, Income Tax compliance, and strategic tax planning, assisting businesses in navigating complex regulatory frameworks with efficiency and precision. With qualifications spanning Chartered Accountancy, Law, Management, and Corporate Secretarial studies, he brings an integrated advisory perspective to business and regulatory matters. He is currently a member of the expert advisory team at HariNiti Finance Private Limited, contributing to tax advisory and corporate compliance solutions for businesses and entrepreneurs.",
+    image: "/CA Vikrant Sharma.png",
+  },
+  {
+    name: "CA Anshul Pandey",
+    role: "Insurance Claim Surveying, Loss Assessment & Investigation",
+    credentials: "CA",
+    bio: "CA Anshul Pandey is a seasoned professional specializing in insurance claim surveying, loss assessment, and investigation. He is a Partner at Rustagi & Associates, a reputed firm with a legacy of over 43 years in the insurance advisory domain. As part of the expert team at HariNiti Finance Private Limited, he provides valuable insights in risk assessment, financial scrutiny, and insurance advisory services.",
+    image: "/CA Anshul Pandey .png",
+  },
+  {
+    name: "Adv. Ambuj Maurya",
+    role: "Advocate | NCLT & Commercial Litigation",
+    credentials: "LL.B. (Hons.) | Bar Council of India",
+    bio: "Advocate Ambuj Maurya is a litigation professional with experience in corporate insolvency, debt recovery, and commercial disputes. He currently serves as NCLT Desk Head at BKM & Associates, New Delhi, handling matters before multiple benches of the National Company Law Tribunal (NCLT). He specializes in IBC proceedings, legal research, petition drafting, and tribunal litigation, and has worked closely with Insolvency Resolution Professionals (IRPs/RPs) in corporate insolvency cases. Earlier, he was associated with I.S. Chauhan & Associates, where he handled DRT, civil, commercial, and district court litigation.",
+    image: "/Adv. Ambuj Maurya.png",
   }
 ];
 
