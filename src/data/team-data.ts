@@ -136,4 +136,12 @@ export const teamMembers: TeamMember[] = [
     image: "/Adv. Ambuj Maurya.png",
     category: "Legal & Compliance",
   },
+  {
+    name: "Mr. Sunil Kumar Mahato",
+    role: "Head of ESG & Sustainability Advisory",
+    credentials: "MBA",
+    bio: "Sunil Kumar Mahato is a sustainability finance professional with experience across government institutions, consulting firms, and ESG advisory platforms. At Hariniti Finance, he leads initiatives in ESG strategy, climate finance, and sustainable business transformation. He has worked with the Forest Department, Government of Maharashtra at TATR, managing a multi-crore sustainability and CSR portfolio across 95 villages in collaboration with corporate CSR partners, NGOs, and policymakers. Sunil has also supported organizations through ESG consulting assignments involving BRSR disclosures, GRI sustainability reporting, ESG assurance, and TCFD-aligned climate risk frameworks. An alumnus of Nalanda University, he contributes to global sustainability dialogue as an advisory member at the Global Green Finance Hub, fostering collaboration on climate finance and responsible investment.",
+    image: "/Mr. Sunil Kumar Mahato.jpeg",
+    category: "Strategic Advisory",
+  },
 ];
