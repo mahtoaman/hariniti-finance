@@ -712,4 +712,78 @@ export const servicesData: ServiceData[] = [
       },
     ],
   },
+  {
+    slug: "esg-csr-advisory",
+    title: "ESG & CSR Advisory Services",
+    iconName: "Leaf",
+    desc: "Strategic ESG advisory and CSR planning to drive sustainable business transformation and global impact.",
+    image: "/service-11.jpg",
+    features: [
+      "ESG Strategy & Risk Assessment",
+      "BRSR & Sustainability Reporting",
+      "Climate Finance & Carbon Markets",
+      "CSR Planning & Impact Assessment",
+      "ESG Assurance & Compliance",
+      "Sustainable Investment Advisory",
+    ],
+    tagline: "Sustainability for Resilient Growth.",
+    overview:
+      "As organizations transition toward responsible business models, ESG (Environmental, Social, and Governance) and CSR (Corporate Social Responsibility) have become critical pillars of corporate strategy. We provide comprehensive advisory services to help businesses integrate sustainability, remain compliant with global reporting standards, and create long-term value for all stakeholders.",
+    sections: [
+      {
+        heading: "ESG Advisory & Strategy",
+        items: [
+          "ESG Strategy & Framework Development",
+          "Materiality Assessment",
+          "ESG Risk Management & Mitigation",
+          "Sustainability Integration into Operations",
+        ],
+      },
+      {
+        heading: "Sustainability Reporting & Disclosures",
+        items: [
+          "BRSR (Business Responsibility and Sustainability Reporting)",
+          "GRI (Global Reporting Initiative) Standards",
+          "TCFD-aligned Climate Risk Reporting",
+          "Stakeholder Engagement & Disclosure Support",
+        ],
+      },
+      {
+        heading: "Climate Finance & Net-Zero Strategy",
+        items: [
+          "Carbon Pricing & Carbon Credit Advisory",
+          "Net-Zero Roadmap & Transition Planning",
+          "Decarbonization Strategy",
+          "Energy Efficiency & Renewable Energy Advisory",
+        ],
+      },
+      {
+        heading: "CSR Planning & Impact Assessment",
+        items: [
+          "Strategic CSR Policy Formulation",
+          "Project Identification & Implementation Support",
+          "Impact Assessment & SROI Studies",
+          "CSR Compliance Monitoring & Reporting",
+        ],
+      },
+      {
+        heading: "ESG Assurance & Governance",
+        items: [
+          "ESG Internal Audits",
+          "Board Oversight & Governance Advisory",
+          "Regulatory Alignment & Gap Analysis",
+          "Supply Chain ESG Due Diligence",
+        ],
+      },
+      {
+        heading: "Sustainable Investment & Green Finance",
+        items: [
+          "Green Bond Advisory",
+          "Responsible Investment Frameworks (PRI)",
+          "ESG Due Diligence for Investors",
+          "Impact Investment Strategy",
+        ],
+      },
+    ],
+  },
 ];

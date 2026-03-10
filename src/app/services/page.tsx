@@ -16,11 +16,12 @@ import {
   HardHat,
   ArrowRight,
   CheckCircle2,
+  Leaf,
 } from "lucide-react";
 import type { LucideIcon } from "lucide-react";
 
 const iconMap: Record<string, LucideIcon> = {
-  Landmark, BarChart3, FileText, Scale, Coins, Rocket, UserCheck, TrendingUp, Building2, HardHat,
+  Landmark, BarChart3, FileText, Scale, Coins, Rocket, UserCheck, TrendingUp, Building2, HardHat, Leaf,
 };
 
 export const metadata: Metadata = {

@@ -19,6 +19,7 @@ import {
   ArrowRight,
   ArrowLeft,
   ChevronRight,
+  Leaf,
 } from "lucide-react";
 import type { LucideIcon } from "lucide-react";
 
@@ -33,6 +34,7 @@ const iconMap: Record<string, LucideIcon> = {
   TrendingUp,
   Building2,
   HardHat,
+  Leaf,
 };
 
 type Params = { slug: string };
