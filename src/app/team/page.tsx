@@ -45,35 +45,63 @@ export default function TeamPage() {
       {/* ── Team Grid ────────────────────────────────── */}
       <section className="py-20">
         <div className="container mx-auto px-4 lg:px-8">
-          
-          {/* Section: Leadership */}
-          <div className="mb-20">
-            <div className="flex items-center gap-4 mb-10">
-              <div className="h-px flex-1 bg-border" />
-              <h2 className="font-display text-2xl font-bold text-foreground">Leadership Team</h2>
-              <div className="h-px flex-1 bg-border" />
-            </div>
-            
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {teamMembers.filter(m => m.category === "Leadership").map((member, i) => (
-                <TeamCard key={member.name} member={member} />
-              ))}
-            </div>
-          </div>
 
-          {/* Section: Professionals */}
-          <div className="mb-20">
-            <div className="flex items-center gap-4 mb-10">
-              <div className="h-px flex-1 bg-border" />
-              <h2 className="font-display text-2xl font-bold text-foreground">Our Professionals</h2>
-              <div className="h-px flex-1 bg-border" />
+          {/* ── Featured: Founder card ── */}
+          {teamMembers.slice(0, 1).map((member) => (
+            <div
+              key={member.name}
+              className="group grid md:grid-cols-2 rounded-2xl overflow-hidden bg-white border border-border shadow-card-hover mb-12"
+            >
+              {/* Photo — left half, tall */}
+              <div className="relative h-80 md:h-[480px] overflow-hidden">
+                <img
+                  src={member.image}
+                  alt={member.name}
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                  style={{ objectPosition: "center 15%" }}
+                />
+                {/* Subtle right fade on desktop */}
+                <div className="hidden md:block absolute inset-y-0 right-0 w-12 bg-gradient-to-r from-transparent to-white/80" />
+              </div>
+
+              {/* Content — right half */}
+              <div className="flex flex-col justify-center p-10 lg:p-14">
+                {/* Founder badge */}
+                <span className="inline-flex self-start items-center gap-1.5 text-xs font-body font-bold tracking-[0.2em] uppercase text-accent bg-accent/10 border border-accent/25 rounded-full px-3 py-1.5 mb-5">
+                  ★ Founder
+                </span>
+
+                <h3 className="font-display text-2xl lg:text-3xl font-bold text-foreground mb-1 leading-tight">
+                  {member.name}
+                </h3>
+                <p className="text-sm font-body font-semibold text-accent mb-2 tracking-wide">
+                  {member.role}
+                </p>
+                {member.credentials && (
+                  <span className="inline-flex self-start text-xs font-body font-medium text-muted-foreground bg-muted border border-border rounded-full px-3 py-1 mb-5">
+                    {member.credentials}
+                  </span>
+                )}
+
+                {/* Divider */}
+                <div className="w-10 h-0.5 bg-accent/50 mb-5" />
+
+                <p className="text-sm text-muted-foreground font-body leading-relaxed">
+                  {member.bio}
+                </p>
+              </div>
             </div>
-            
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {teamMembers.filter(m => m.category !== "Leadership").map((member, i) => (
-                <TeamCard key={member.name} member={member} />
-              ))}
-            </div>
+          ))}
+
+          {/* ── All Team Members (Prabhat → Amit → rest, excluding founder) ── */}
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+            {[
+              ...teamMembers.filter(m => m.name === "Prabhat Chandra"),
+              ...teamMembers.filter(m => m.name === "Amit Mishra"),
+              ...teamMembers.filter(m => m.name !== "CA Satish Singh Rajput" && m.name !== "Prabhat Chandra" && m.name !== "Amit Mishra"),
+            ].map((member) => (
+              <TeamCard key={member.name} member={member} />
+            ))}
           </div>
 
         </div>
@@ -142,13 +170,6 @@ function TeamCard({ member }: { member: any }) {
           className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
           style={{ objectPosition: "center 15%" }}
         />
-        {member.category && (
-          <div className="absolute bottom-4 left-4">
-            <span className="px-3 py-1 rounded-full bg-navy-dark/80 backdrop-blur-md text-[10px] font-bold text-gold border border-gold/20 uppercase tracking-widest">
-              {member.category}
-            </span>
-          </div>
-        )}
       </div>
 
       <div className="p-6 flex flex-col gap-2 flex-1">

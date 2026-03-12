@@ -659,6 +659,10 @@ h1, h2, h3, h4, h5, h6 {
   margin-bottom: 2.5rem;
 }
 
+.mb-12 {
+  margin-bottom: 3rem;
+}
+
 .mb-14 {
   margin-bottom: 3.5rem;
 }
@@ -733,6 +737,10 @@ h1, h2, h3, h4, h5, h6 {
 
 .mt-14 {
   margin-top: 3.5rem;
+}
+
+.mt-16 {
+  margin-top: 4rem;
 }
 
 .mt-2 {
@@ -926,6 +934,10 @@ h1, h2, h3, h4, h5, h6 {
 
 .h-\[1px\] {
   height: 1px;
+}
+
+.h-\[50vh\] {
+  height: 50vh;
 }
 
 .h-\[var\(--radix-navigation-menu-viewport-height\)\] {
@@ -1288,6 +1300,20 @@ h1, h2, h3, h4, h5, h6 {
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.animate-fade-in {
+  animation: .5s ease-out forwards fade-in;
+}
+
 @keyframes pulse {
   50% {
     opacity: .5;
@@ -1333,6 +1359,10 @@ h1, h2, h3, h4, h5, h6 {
 
 .grid-cols-1 {
   grid-template-columns: repeat(1, minmax(0, 1fr));
+}
+
+.grid-cols-2 {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 
 .flex-row {
@@ -1541,6 +1571,10 @@ h1, h2, h3, h4, h5, h6 {
   border-radius: 1rem;
 }
 
+.rounded-3xl {
+  border-radius: 1.5rem;
+}
+
 .rounded-\[2px\] {
   border-radius: 2px;
 }
@@ -1629,6 +1663,10 @@ h1, h2, h3, h4, h5, h6 {
 
 .border-\[--color-border\] {
   border-color: var(--color-border);
+}
+
+.border-accent {
+  border-color: hsl(var(--accent));
 }
 
 .border-accent\/20 {
@@ -1834,6 +1872,10 @@ h1, h2, h3, h4, h5, h6 {
   background-color: hsl(var(--navy-dark) / .65);
 }
 
+.bg-navy-dark\/70 {
+  background-color: hsl(var(--navy-dark) / .7);
+}
+
 .bg-navy-dark\/75 {
   background-color: hsl(var(--navy-dark) / .75);
 }
@@ -1970,6 +2012,12 @@ h1, h2, h3, h4, h5, h6 {
   --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
 }
 
+.from-slate-50 {
+  --tw-gradient-from: #f8fafc var(--tw-gradient-from-position);
+  --tw-gradient-to: #f8fafc00 var(--tw-gradient-to-position);
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+}
+
 .from-transparent {
   --tw-gradient-from: transparent var(--tw-gradient-from-position);
   --tw-gradient-to: #0000 var(--tw-gradient-to-position);
@@ -2054,6 +2102,10 @@ h1, h2, h3, h4, h5, h6 {
 
 .p-10 {
   padding: 2.5rem;
+}
+
+.p-12 {
+  padding: 3rem;
 }
 
 .p-2 {
@@ -2346,6 +2398,10 @@ h1, h2, h3, h4, h5, h6 {
   font-size: .8rem;
 }
 
+.text-\[10px\] {
+  font-size: 10px;
+}
+
 .text-base {
   font-size: 1rem;
   line-height: 1.5rem;
@@ -2600,6 +2656,16 @@ h1, h2, h3, h4, h5, h6 {
   color: hsl(var(--sidebar-foreground) / .7);
 }
 
+.text-slate-300 {
+  --tw-text-opacity: 1;
+  color: rgb(203 213 225 / var(--tw-text-opacity, 1));
+}
+
+.text-slate-400 {
+  --tw-text-opacity: 1;
+  color: rgb(148 163 184 / var(--tw-text-opacity, 1));
+}
+
 .text-white {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity, 1));
@@ -2831,6 +2897,10 @@ h1, h2, h3, h4, h5, h6 {
   transition-timing-function: cubic-bezier(.4, 0, .2, 1);
 }
 
+.delay-100 {
+  transition-delay: .1s;
+}
+
 .duration-1000 {
   transition-duration: 1s;
 }
@@ -2913,6 +2983,10 @@ h1, h2, h3, h4, h5, h6 {
 
 .duration-700 {
   animation-duration: .7s;
+}
+
+.delay-100 {
+  animation-delay: .1s;
 }
 
 .ease-in-out {
@@ -3051,6 +3125,14 @@ h1, h2, h3, h4, h5, h6 {
   border-color: hsl(var(--gold));
 }
 
+.hover\:border-gold\/30:hover {
+  border-color: hsl(var(--gold) / .3);
+}
+
+.hover\:border-gold\/40:hover {
+  border-color: hsl(var(--gold) / .4);
+}
+
 .hover\:bg-accent:hover {
   background-color: hsl(var(--accent));
 }
@@ -3069,6 +3151,10 @@ h1, h2, h3, h4, h5, h6 {
 
 .hover\:bg-gold\/10:hover {
   background-color: hsl(var(--gold) / .1);
+}
+
+.hover\:bg-gold\/20:hover {
+  background-color: hsl(var(--gold) / .2);
 }
 
 .hover\:bg-gold\/5:hover {
@@ -3150,6 +3236,11 @@ h1, h2, h3, h4, h5, h6 {
 
 .hover\:text-sidebar-accent-foreground:hover {
   color: hsl(var(--sidebar-accent-foreground));
+}
+
+.hover\:text-white:hover {
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity, 1));
 }
 
 .hover\:underline:hover {
@@ -4118,6 +4209,10 @@ h1, h2, h3, h4, h5, h6 {
 
   .md\:grid-cols-3 {
     grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .md\:grid-cols-4 {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
   }
 
   .md\:flex-row {
